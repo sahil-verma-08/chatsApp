@@ -17,7 +17,7 @@ function App() {
   
 const {authUser,checkAuth,isCheckingAuth}=useAuthStore()
 const {theme}=useThemeStore()
-    useEffect(()=>{
+ useEffect(()=>{
       checkAuth()
     },[checkAuth])
 
@@ -32,7 +32,7 @@ const {theme}=useThemeStore()
 
 
   return (
-    <div data-theme="theme">
+    <div data-theme={theme}>
     
     <Navbar />
     <Routes>

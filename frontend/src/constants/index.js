@@ -1,4 +1,4 @@
-import themes from "daisyui/theme/object";
+
 
 export const THEMES = [
     "light",
