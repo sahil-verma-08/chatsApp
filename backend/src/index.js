@@ -6,12 +6,13 @@ import authRoutes from "./routes/auth.route.js"
 import { connectDb } from "./lib/db.js";6
 import messageRoutes from "./routes/message.route.js"
 import cors from "cors";
-
+import {app,server} from "./lib/socket.js";
+import path from "path"
 
 dotenv.config();
 const PORT=process.env.PORT
-const app= express();
 
+const _dirname=path.resolve();
 
 app.use(cookieParser());
 
@@ -27,12 +28,20 @@ app.use(
   
 
 app.use ("/api/auth",authRoutes)
-app.use("/api/message",messageRoutes)
+app.use("/api/message",messageRoutes);
+
+if (process.env.NODE_ENV==="production"){
+  app.use(express.static(path.join(_dirname,"../frontend/dist")))
+
+   app.get("*",(req,res)=>{
+    res.sendFile(path.join(_dirname,"../frontend","dist","index.html"))
+   })
+}
 
 
 
 
-app.listen(PORT,()=>{
+server.listen(PORT,()=>{
     console.log("server is running on port :",PORT)
     connectDb()
 });
