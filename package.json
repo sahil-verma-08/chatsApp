@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sahil-verma-08/chatsApp/issues"
   },
-  "homepage": "https://github.com/sahil-verma-08/chatsApp#readme"
+  "homepage": "https://github.com/sahil-verma-08/chatsApp#readme",
+  "dependencies": {
+    "path-to-regexp": "^8.2.0"
+  }
 }
