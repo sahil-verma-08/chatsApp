@@ -32,7 +32,7 @@ export const useChatStore = create((set,get)=>({
         return;
       }
     try {
-         const res= await axiosInstance.get(`/message/chat/${selectedUser}`);
+         const res= await axiosInstance.get(`/message/${selectedUser}`);
          set({messages:res.data});
     } catch (error) {
         
