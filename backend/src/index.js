@@ -8,11 +8,13 @@ import messageRoutes from "./routes/message.route.js"
 import cors from "cors";
 import {app,server} from "./lib/socket.js";
 import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 const PORT=process.env.PORT || 9000
 
-const __dirname = path.resolve();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(cookieParser());
 
