@@ -27,6 +27,10 @@ export const useChatStore = create((set,get)=>({
 
   getMessages: async(selectedUser)=>{
        set({isMessagesLoading:true});
+       if (!selectedUser) {
+        toast.error("No user selected");
+        return;
+      }
     try {
          const res= await axiosInstance.get(`/message/chat/${selectedUser}`);
          set({messages:res.data});
