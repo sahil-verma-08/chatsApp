@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "npm run start --prefix backend"
+     "build":"npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+     "start": "npm run start --prefix backend"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/sahil-verma-08/chatsApp/issues"
   },
-  "homepage": "https://github.com/sahil-verma-08/chatsApp#readme",
-  "dependencies": {
-    "path-to-regexp": "^8.2.0"
-  }
+  "homepage": "https://github.com/sahil-verma-08/chatsApp#readme"
 }
