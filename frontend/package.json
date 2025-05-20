@@ -15,7 +15,7 @@
     "axios": "^1.9.0",
     "bcryptjs": "^2.4.3",
     "buffer": "^6.0.3",
-    "chatsapp": "file:..",
+    
     "cloudinary": "^2.6.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
